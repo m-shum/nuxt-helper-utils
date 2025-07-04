@@ -1,0 +1,87 @@
+<template>
+  <div>
+    <!-- Array -->
+    <div
+      v-if="arrHasEntries([1])"
+      data-testid="arr-has-entries-true"
+    />
+    <div
+      v-if="arrHasEntries([])"
+      data-testid="arr-has-entries-false-empty"
+    />
+    <div
+      v-if="arrHasEntries(null)"
+      data-testid="arr-has-entries-false-null"
+    />
+    <div
+      v-if="arrHasEntries(undefined)"
+      data-testid="arr-has-entries-false-undefined"
+    />
+    <div
+      v-if="arrHasEntries({})"
+      data-testid="arr-has-entries-false-obj"
+    />
+    <!-- Number -->
+    <div
+      v-if="numHasValue(1)"
+      data-testid="num-has-value-true"
+    />
+    <div
+      v-if="numHasValue(0)"
+      data-testid="num-has-value-false"
+    />
+    <div
+      v-if="numHasValue(null)"
+      data-testid="num-has-value-false-null"
+    />
+    <div
+      v-if="numHasValue(undefined)"
+      data-testid="num-has-value-false-undefined"
+    />
+    <div
+      v-if="numHasValue('1')"
+      data-testid="num-has-value-false-str"
+    />
+    <!-- Object -->
+    <div
+      v-if="objHasEntries({ a: 1 })"
+      data-testid="obj-has-entries-true"
+    />
+    <div
+      v-if="objHasEntries({})"
+      data-testid="obj-has-entries-false-empty"
+    />
+    <div
+      v-if="objHasEntries(null)"
+      data-testid="obj-has-entries-false-null"
+    />
+    <div
+      v-if="objHasEntries(undefined)"
+      data-testid="obj-has-entries-false-undefined"
+    />
+    <div
+      v-if="objHasEntries([])"
+      data-testid="obj-has-entries-false-arr"
+    />
+    <!-- String -->
+    <div
+      v-if="strHasValue('a')"
+      data-testid="str-has-value-true"
+    />
+    <div
+      v-if="strHasValue('')"
+      data-testid="str-has-value-false-empty"
+    />
+    <div
+      v-if="strHasValue(null)"
+      data-testid="str-has-value-false-null"
+    />
+    <div
+      v-if="strHasValue(undefined)"
+      data-testid="str-has-value-false-undefined"
+    />
+  </div>
+</template>
+
+<script setup>
+</script>
