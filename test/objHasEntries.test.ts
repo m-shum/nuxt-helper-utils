@@ -6,6 +6,7 @@ describe('objHasEntries', () => {
     expect(objHasEntries({ a: 1 })).toBe(true)
     expect(objHasEntries({ a: '1' })).toBe(true)
     expect(objHasEntries({ a: null, b: undefined })).toBe(false)
+    expect(objHasEntries({ a: null, b: 1 })).toBe(true)
     expect(objHasEntries({})).toBe(false)
     expect(objHasEntries([])).toBe(false)
     expect(objHasEntries(['a'])).toBe(false)
